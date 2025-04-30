@@ -31,19 +31,27 @@ const VideoList = ({
   };
 
   useEffect(() => {
-    if (onLoadFirstVideo) {
-      if (data && data.length > 0) {
-        if (!selectedVideo) {
-          onLoadFirstVideo({
-            embedUrl: data[0].embedUrl,
-            title: data[0].title,
-          });
-        }
-      } else {
-        if (selectedVideo && (selectedVideo.embedUrl !== "" || selectedVideo.title !== "")) {
-          onLoadFirstVideo({ embedUrl: "", title: "" });
-        }
+    if (!onLoadFirstVideo) return;
+  
+    // Se não há vídeos, limpe seleção se não estiver limpo
+    if (!data || data.length === 0) {
+      if (selectedVideo && (selectedVideo.embedUrl !== "" || selectedVideo.title !== "")) {
+        onLoadFirstVideo({ embedUrl: "", title: "" });
       }
+      return;
+    }
+  
+    // Se não há selectedVideo OU selectedVideo não está mais na lista, selecione o novo primeiro
+    const selectedStillExists = data.some(
+      v =>
+        v.embedUrl === selectedVideo?.embedUrl &&
+        v.title === selectedVideo?.title
+    );
+    if (!selectedVideo || !selectedStillExists) {
+      onLoadFirstVideo({
+        embedUrl: data[0].embedUrl,
+        title: data[0].title,
+      });
     }
   }, [data, onLoadFirstVideo, selectedVideo]);
 
