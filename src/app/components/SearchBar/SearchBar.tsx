@@ -7,12 +7,10 @@ import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 
 const SearchBar = () => {
-  // 1. Declare uma variável de estado para armazenar o valor do InputBase
   const [searchText, setSearchText] = useState<string>("");
 
-  // Função para lidar com a mudança no InputBase
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearchText(event.target.value); // Atualiza o estado conforme o usuário digita
+    setSearchText(event.target.value); 
   };
 
   const handleSearchSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -25,7 +23,7 @@ const SearchBar = () => {
     <Paper
       component="form"
       sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400 }}
-      onSubmit={handleSearchSubmit} // Lida com a submissão do formulário
+      onSubmit={handleSearchSubmit} 
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
