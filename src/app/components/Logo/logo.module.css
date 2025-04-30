@@ -4,3 +4,8 @@
   align-items: center;
   gap: 3px;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
