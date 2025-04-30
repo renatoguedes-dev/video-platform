@@ -1,18 +1,12 @@
-interface VideoPlayerProps {
-  embedUrl: string;
-  title?: string;
-  width?: string | number;
-  height?: string | number;
-  allowFullScreen?: boolean;
-}
+import { IVideoPlayer } from "@/app/interfaces/VideoPlayer";
 
 const VideoPlayer = ({
   embedUrl,
   title = "Vídeo incorporado",
   width = "100%",
-  height = 450,
+  height = "90%",
   allowFullScreen = true,
-}: VideoPlayerProps) => {
+}: IVideoPlayer) => {
   return (
     <iframe
       width={width}

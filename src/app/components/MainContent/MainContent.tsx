@@ -6,23 +6,31 @@ import styles from "./mainContent.module.css";
 import VideoList from "../VideoList/VideoList";
 
 const MainContent = () => {
-  const [selectedVideo, setSelectedVideo] = useState({
-    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    title: "Never Gonna Give You Up",
-  });
+  const [selectedVideo, setSelectedVideo] = useState<{
+    embedUrl: string;
+    title: string;
+  } | null>(null);
 
   return (
     <div className={styles.main}>
       <div className={styles.VideoDiv}>
-        <VideoPlayer
-          embedUrl={selectedVideo.embedUrl}
-          title={selectedVideo.title}
-        />
-        <h1>{selectedVideo.title}</h1>
+        {selectedVideo && (
+          <>
+            <h1 className={styles.videoTitle}>{selectedVideo.title}</h1>
+            <VideoPlayer
+              embedUrl={selectedVideo.embedUrl}
+              title={selectedVideo.title}
+            />
+          </>
+        )}
       </div>
 
       <div>
-        <VideoList onSelect={setSelectedVideo} />
+        <VideoList
+          selectedVideo={selectedVideo}
+          onSelect={setSelectedVideo}
+          onLoadFirstVideo={(video) => setSelectedVideo(video)}
+        />
       </div>
     </div>
   );

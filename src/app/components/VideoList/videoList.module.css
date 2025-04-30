@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-height: 450px;
+  max-height: 490px;
   overflow-y: scroll;
+  min-width: 270px;
 }
 
 .ul {
@@ -19,12 +20,29 @@
 .li {
   cursor: pointer;
   display: flex;
+  align-items: center;
   border-bottom: 1px solid black;
-  padding-bottom: 5px;
+  border-radius: 3px 3px 0 0;
+  padding: 2px 1px 5px 1px;
   gap: 10px;
+}
+
+.li:hover,
+.currentVideo {
+  background-color: lightgray;
 }
 
 .imageContainer {
   min-width: 120px;
   min-height: 84px;
+}
+
+@media screen and (max-width: 300px) {
+  .listText {
+    font-size: 18px;
+  }
+
+  .videoTextTitle {
+    font-size: 16px;
+  }
 }

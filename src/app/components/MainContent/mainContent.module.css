@@ -7,10 +7,42 @@
 
 .VideoDiv {
   width: 100%;
+  height: 500px;
 }
 
 @media screen and (max-width: 710px) {
   .main {
     flex-direction: column;
   }
+
+  .VideoDiv {
+    margin-bottom: 20px;
+  }
 }
+
+@media screen and (max-width: 450px) {
+  .VideoDiv {
+    height: 300px;
+  }
+
+  .videoTitle {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .VideoDiv {
+    height: 250px;
+  }
+
+  .main {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .videoTitle {
+    font-size: 18px;
+  }
+}
+
