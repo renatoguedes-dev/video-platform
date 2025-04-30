@@ -33,21 +33,14 @@ const VideoList = ({
   useEffect(() => {
     if (onLoadFirstVideo) {
       if (data && data.length > 0) {
-        if (
-          !selectedVideo ||
-          selectedVideo.embedUrl !== data[0].embedUrl ||
-          selectedVideo.title !== data[0].title
-        ) {
+        if (!selectedVideo) {
           onLoadFirstVideo({
             embedUrl: data[0].embedUrl,
             title: data[0].title,
           });
         }
       } else {
-        if (
-          selectedVideo &&
-          (selectedVideo.embedUrl !== "" || selectedVideo.title !== "")
-        ) {
+        if (selectedVideo && (selectedVideo.embedUrl !== "" || selectedVideo.title !== "")) {
           onLoadFirstVideo({ embedUrl: "", title: "" });
         }
       }
