@@ -1,0 +1,16 @@
+.main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.VideoDiv {
+  width: 100%;
+}
+
+@media screen and (max-width: 710px) {
+  .main {
+    flex-direction: column;
+  }
+}

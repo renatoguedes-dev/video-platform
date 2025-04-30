@@ -1,0 +1,30 @@
+.listDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 16px;
+}
+
+.li {
+  cursor: pointer;
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  gap: 10px;
+}
+
+.imageContainer {
+  min-width: 120px;
+  min-height: 84px;
+}
