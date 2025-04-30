@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
-import styles from "./homeContent.module.css";
-import VideoList from "../VideoList/VideoList";
+import styles from "./favoriteContent.module.css";
 import Link from "next/link";
+import VideoList from "../VideoList/VideoList";
 
-const HomeContent = () => {
+const FavoriteContent = () => {
   const [selectedVideo, setSelectedVideo] = useState<{
     embedUrl: string;
     title: string;
@@ -14,9 +14,13 @@ const HomeContent = () => {
 
   return (
     <div className={styles.pageContent}>
-      <Link href={"/favorites"} className={styles.favoritesLink}>
-        <p>Acessar músicas favoritas</p>
-      </Link>
+      <div className={styles.linkDiv}>
+        <Link href={"/"} className={styles.favoritesLink}>
+          <p>Voltar à página inicial</p>
+        </Link>
+      </div>
+
+      <h1>Músicas Favoritas</h1>
 
       <div className={styles.main}>
         <div className={styles.videoDiv}>
@@ -36,7 +40,7 @@ const HomeContent = () => {
             selectedVideo={selectedVideo}
             onSelect={setSelectedVideo}
             onLoadFirstVideo={(video) => setSelectedVideo(video)}
-            isFavoriteList={false}
+            isFavoriteList={true}
           />
         </div>
       </div>
@@ -44,4 +48,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default FavoriteContent;

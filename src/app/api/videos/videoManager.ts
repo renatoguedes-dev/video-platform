@@ -15,6 +15,24 @@ export class VideoManager {
       },
       {
         id: "2",
+        title: "CS50W - Lecture 3 - Django",
+        thumbnail: "https://img.youtube.com/vi/w8q0C-C1js4/hqdefault.jpg",
+        channel: "CS50",
+        embedUrl:
+          "https://www.youtube.com/embed/w8q0C-C1js4",
+        favorite: false,
+      },
+      {
+        id: "3",
+        title: "Binary Trees, Part 1",
+        thumbnail: "https://img.youtube.com/vi/76dhtgZt38A/hqdefault.jpg",
+        channel: "MIT OpenCourseWare",
+        embedUrl:
+          "https://www.youtube.com/embed/76dhtgZt38A",
+        favorite: false,
+      },
+      {
+        id: "4",
         title: "Como WebHooks funcionam",
         thumbnail: "https://img.youtube.com/vi/oQaJn6RdA3g/hqdefault.jpg",
         channel: "ByteMonk",
@@ -23,7 +41,7 @@ export class VideoManager {
         favorite: false,
       },
       {
-        id: "3",
+        id: "5",
         title: "React JS para Iniciantes",
         thumbnail: "https://img.youtube.com/vi/Ke90Tje7VS0/hqdefault.jpg",
         channel: "Programming with Mosh",
@@ -31,7 +49,7 @@ export class VideoManager {
         favorite: false,
       },
       {
-        id: "4",
+        id: "6",
         title: "Aprenda TypeScript do zero!",
         thumbnail: "https://img.youtube.com/vi/BwuLxPH8IDs/hqdefault.jpg",
         channel: "Academind",
@@ -39,7 +57,7 @@ export class VideoManager {
         favorite: false,
       },
       {
-        id: "5",
+        id: "7",
         title: "Node.js para Iniciantes",
         thumbnail: "https://img.youtube.com/vi/TlB_eWDSMt4/hqdefault.jpg",
         channel: "Programming with Mosh",
@@ -47,7 +65,7 @@ export class VideoManager {
         favorite: false,
       },
       {
-        id: "6",
+        id: "8",
         title: "React Query - Tutorial Completo",
         thumbnail: "https://img.youtube.com/vi/8K1N3fE-cDs/hqdefault.jpg",
         channel: "Cosden Solutions",
@@ -71,7 +89,7 @@ export class VideoManager {
       video.favorite = favorite;
       return video;
     }
-    
+
     return null;
   }
 }

@@ -7,7 +7,6 @@ export const getVideoList = async (): Promise<IVideo[]> => {
 
     return res.data;
   } catch (err: unknown) {
-    console.log(err);
     throw new Error("Erro ao buscar vídeos: " + err);
   }
 };
@@ -18,7 +17,6 @@ export const getFavoritesVideoList = async (): Promise<IVideo[]> => {
 
     return res.data;
   } catch (err: unknown) {
-    console.log(err);
     throw new Error("Erro ao buscar vídeos favoritos: " + err);
   }
 };
@@ -35,7 +33,6 @@ export const updateFavoriteVideo = async (
 
     return res.data;
   } catch (err: unknown) {
-    console.log(err);
     throw new Error("Erro ao buscar vídeos favoritos: " + err);
   }
 };
