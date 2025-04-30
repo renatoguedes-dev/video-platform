@@ -1,7 +1,9 @@
+import Header from "../components/Header/Header";
+
 const Page = () => {
   return (
-    <div>
-      
+    <div className="content">
+      <Header />
       <h1>Músicas Favoritas</h1>
       <div>Músicas</div>
     </div>
