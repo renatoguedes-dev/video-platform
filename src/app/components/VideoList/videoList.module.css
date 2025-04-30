@@ -24,17 +24,18 @@
   border-bottom: 1px solid black;
   border-radius: 3px 3px 0 0;
   padding: 2px 1px 5px 1px;
-  gap: 10px;
+  gap: 3px;
 }
 
 .li:hover,
 .currentVideo {
-  background-color: lightgray;
+  background-color: rgb(243, 242, 242);
 }
 
 .imageContainer {
   min-width: 120px;
   min-height: 84px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 300px) {

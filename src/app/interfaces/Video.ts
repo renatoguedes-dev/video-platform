@@ -4,4 +4,5 @@ export interface IVideo {
   thumbnail: string;
   channel: string;
   embedUrl: string;
+  favorite: boolean;
 }

@@ -1,13 +1,13 @@
 "use client";
 
 import Header from "./components/Header/Header";
-import MainContent from "./components/MainContent/MainContent";
+import HomeContent from "./components/HomeContent/HomeContent";
 
 export default function Home() {
   return (
     <div className="content">
       <Header />
-      <MainContent />
+      <HomeContent />
     </div>
   );
 }

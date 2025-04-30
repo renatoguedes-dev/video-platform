@@ -1,30 +1,28 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import Image from "next/image";
 import styles from "./videoList.module.css";
 import { useEffect } from "react";
-import { IVideo } from "@/app/interfaces/Video";
 import { IVideoList } from "@/app/interfaces/VideoList";
-
-
-const getMockVideos = async (): Promise<IVideo[]> => {
-  const res = await fetch("/api/videos");
-
-  if (!res.ok) {
-    throw new Error("Erro ao buscar vídeos");
-  }
-
-  return res.json();
-};
+import { getVideoList, updateFavoriteVideo } from "@/app/axios";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 const VideoList = ({
   selectedVideo,
   onSelect,
   onLoadFirstVideo,
 }: IVideoList) => {
+  const queryClient = useQueryClient();
+
   const { data, isLoading, error } = useQuery({
     queryKey: ["videos"],
-    queryFn: getMockVideos,
+    queryFn: getVideoList,
   });
+
+  const toggleFavorite = async (id: string, favoriteStatus: boolean) => {
+    await updateFavoriteVideo(id, !favoriteStatus);
+
+    queryClient.invalidateQueries({ queryKey: ["videos"] });
+  };
 
   useEffect(() => {
     if (data && data.length > 0 && onLoadFirstVideo && !selectedVideo) {
@@ -55,6 +53,15 @@ const VideoList = ({
                   onSelect({ embedUrl: video.embedUrl, title: video.title })
                 }
               >
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(video.id, video.favorite);
+                  }}
+                >
+                  <FavoriteButton isFavorite={video.favorite} />
+                </div>
+
                 <div className={styles.imageContainer}>
                   <Image
                     src={video.thumbnail}
