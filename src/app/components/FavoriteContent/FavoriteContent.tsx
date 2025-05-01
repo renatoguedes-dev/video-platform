@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
-import styles from "./favoriteContent.module.css";
 import Link from "next/link";
 import VideoList from "../VideoList/VideoList";
 
