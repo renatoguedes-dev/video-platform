@@ -33,7 +33,6 @@ const VideoList = ({
   useEffect(() => {
     if (!onLoadFirstVideo) return;
   
-    // Se não há vídeos, limpe seleção se não estiver limpo
     if (!data || data.length === 0) {
       if (selectedVideo && (selectedVideo.embedUrl !== "" || selectedVideo.title !== "")) {
         onLoadFirstVideo({ embedUrl: "", title: "" });
@@ -41,7 +40,6 @@ const VideoList = ({
       return;
     }
   
-    // Se não há selectedVideo OU selectedVideo não está mais na lista, selecione o novo primeiro
     const selectedStillExists = data.some(
       v =>
         v.embedUrl === selectedVideo?.embedUrl &&
