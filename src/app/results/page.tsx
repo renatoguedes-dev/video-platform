@@ -7,8 +7,8 @@ interface ParamsProps {
   };
 }
 
-const ResultsPage = ({ searchParams }: ParamsProps) => {
-  const { search_query } = searchParams;
+const ResultsPage = async ({ searchParams }: ParamsProps) => {
+  const { search_query } = await searchParams;
 
   return (
     <div className="content">

@@ -8,7 +8,7 @@ interface ParamsProps {
 }
 
 const VideoByIdPage = async ({ params }: ParamsProps) => {
-  const { id } = params;
+  const { id } = await params;
 
   return (
     <div className="content">
