@@ -1,3 +1,4 @@
+import styles from "./videoPlayer.module.css"
 import { IVideoPlayer } from "@/app/interfaces/VideoPlayer";
 
 const VideoPlayer = ({
@@ -9,6 +10,7 @@ const VideoPlayer = ({
 }: IVideoPlayer) => {
   return (
     <iframe
+      className={styles.iframe}
       width={width}
       height={height}
       src={embedUrl}
