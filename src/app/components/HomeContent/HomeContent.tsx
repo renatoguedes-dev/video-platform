@@ -15,7 +15,7 @@ const HomeContent = () => {
     <div className="pageContent">
       <div className="linkDiv">
         <Link href={"/favorites"} className="favoritesLink">
-          <p>Acessar músicas favoritas</p>
+          <p>Acessar vídeos favoritos</p>
         </Link>
       </div>
 
