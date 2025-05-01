@@ -13,20 +13,20 @@ const FavoriteContent = () => {
   } | null>(null);
 
   return (
-    <div className={styles.pageContent}>
-      <div className={styles.linkDiv}>
-        <Link href={"/"} className={styles.favoritesLink}>
+    <div className="pageContent">
+      <div className="linkDiv">
+        <Link href={"/"} className="favoritesLink">
           <p>Voltar à página inicial</p>
         </Link>
       </div>
 
       <h1>Músicas Favoritas</h1>
 
-      <div className={styles.main}>
-        <div className={styles.videoDiv}>
+      <div className="main">
+        <div className="videoDiv">
           {selectedVideo && (
             <>
-              <h1 className={styles.videoTitle}>{selectedVideo.title}</h1>
+              <h1 className="videoTitle">{selectedVideo.title}</h1>
               <VideoPlayer
                 embedUrl={selectedVideo.embedUrl}
                 title={selectedVideo.title}

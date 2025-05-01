@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
-import styles from "./homeContent.module.css";
 import VideoList from "../VideoList/VideoList";
 import Link from "next/link";
 
@@ -13,18 +12,18 @@ const HomeContent = () => {
   } | null>(null);
 
   return (
-    <div className={styles.pageContent}>
-      <div className={styles.linkDiv}>
-        <Link href={"/favorites"} className={styles.favoritesLink}>
+    <div className="pageContent">
+      <div className="linkDiv">
+        <Link href={"/favorites"} className="favoritesLink">
           <p>Acessar músicas favoritas</p>
         </Link>
       </div>
 
-      <div className={styles.main}>
-        <div className={styles.videoDiv}>
+      <div className="main">
+        <div className="videoDiv">
           {selectedVideo && (
             <>
-              <h1 className={styles.videoTitle}>{selectedVideo.title}</h1>
+              <h1 className="videoTitle">{selectedVideo.title}</h1>
               <VideoPlayer
                 embedUrl={selectedVideo.embedUrl}
                 title={selectedVideo.title}

@@ -1,12 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
+import { useRouter } from "next/navigation";
 import { IResultsDiv } from "@/app/interfaces/ResultsDiv";
 import styles from "./resultsDiv.module.css";
 import { Box, Paper } from "@mui/material";
 
 const ResultsDiv = ({ searchResults }: IResultsDiv) => {
+  const router = useRouter();
+
   const handleClick = (id: string) => {
     console.log(`id é ${id}`);
-    
+    router.push(`/videos/${id}`);
   };
 
   const shouldSearch =
