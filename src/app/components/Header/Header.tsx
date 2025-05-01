@@ -8,11 +8,11 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getVideoList } from "@/app/axios";
 import getSearchResults from "@/app/utils/getSearchResults";
-import { IVideo } from "@/app/interfaces/Video";
+import { useSearch } from "@/app/contexts/SearchContext";
 
 const Header = () => {
   const [searchText, setSearchText] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<IVideo[] | null>(null);
+  const { searchResults, setSearchResults } = useSearch();
 
   const { data } = useQuery({
     queryKey: ["videos"],
@@ -21,7 +21,7 @@ const Header = () => {
 
   useEffect(() => {
     getSearchResults(data, searchText, setSearchResults);
-  }, [searchText, data]);
+  }, [searchText, data, setSearchResults]);
 
   return (
     <div className={styles.header}>

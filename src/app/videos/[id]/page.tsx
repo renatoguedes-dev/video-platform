@@ -7,7 +7,7 @@ interface ParamsProps {
   };
 }
 
-const VideoByIdPage = ({ params }: ParamsProps) => {
+const VideoByIdPage = async ({ params }: ParamsProps) => {
   const { id } = params;
 
   return (

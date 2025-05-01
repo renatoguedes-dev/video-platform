@@ -5,4 +5,5 @@ export interface IVideo {
   channel: string;
   embedUrl: string;
   favorite: boolean;
+  description: string;
 }

@@ -6,8 +6,11 @@ import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import { ISearchBar } from "@/app/interfaces/SearchBar";
+import { useRouter } from "next/navigation";
 
 const SearchBar = ({ searchText, setSearchText }: ISearchBar) => {
+  const router = useRouter();
+
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value);
   };
@@ -16,6 +19,8 @@ const SearchBar = ({ searchText, setSearchText }: ISearchBar) => {
     event.preventDefault();
     console.log(`Pesquisando por: ${searchText}`);
     // TODO fazer/chamar função de busca
+
+    router.push(`/results?search_query=${searchText}`);
   };
 
   return (

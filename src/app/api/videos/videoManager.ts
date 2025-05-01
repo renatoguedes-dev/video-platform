@@ -12,24 +12,27 @@ export class VideoManager {
         channel: "Rick Astley",
         embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
         favorite: false,
+        description:
+          "The official video for “Never Gonna Give You Up” by Rick Astley. ",
       },
       {
         id: "2",
         title: "CS50W - Lecture 3 - Django",
         thumbnail: "https://img.youtube.com/vi/w8q0C-C1js4/hqdefault.jpg",
         channel: "CS50",
-        embedUrl:
-          "https://www.youtube.com/embed/w8q0C-C1js4",
+        embedUrl: "https://www.youtube.com/embed/w8q0C-C1js4",
         favorite: false,
+        description:
+          "This is CS50W, CS50's Web Programming with Python and JavaScript.",
       },
       {
         id: "3",
         title: "Binary Trees, Part 1",
         thumbnail: "https://img.youtube.com/vi/76dhtgZt38A/hqdefault.jpg",
         channel: "MIT OpenCourseWare",
-        embedUrl:
-          "https://www.youtube.com/embed/76dhtgZt38A",
+        embedUrl: "https://www.youtube.com/embed/76dhtgZt38A",
         favorite: false,
+        description: "This is the first of two lectures on binary trees.",
       },
       {
         id: "4",
@@ -39,6 +42,8 @@ export class VideoManager {
         embedUrl:
           "https://www.youtube.com/embed/oQaJn6RdA3g?si=z7d31lbvuFl-rp4l",
         favorite: false,
+        description:
+          "In the example provided in the video, the client app was mistakenly making periodic requests to the server to check for updates.",
       },
       {
         id: "5",
@@ -47,6 +52,8 @@ export class VideoManager {
         channel: "Programming with Mosh",
         embedUrl: "https://www.youtube.com/embed/Ke90Tje7VS0",
         favorite: false,
+        description:
+          "React JS Tutorial - Get up & running with React JS: the most popular JavaScript library in the world!",
       },
       {
         id: "6",
@@ -55,6 +62,8 @@ export class VideoManager {
         channel: "Academind",
         embedUrl: "https://www.youtube.com/embed/BwuLxPH8IDs",
         favorite: false,
+        description:
+          "Free TypeScript Introduction for Beginners: Get Started with TypeScript and learn how to use it!",
       },
       {
         id: "7",
@@ -63,6 +72,8 @@ export class VideoManager {
         channel: "Programming with Mosh",
         embedUrl: "https://www.youtube.com/embed/TlB_eWDSMt4",
         favorite: false,
+        description:
+          "Learn Node.js basics in 1 hour! ⚡ This beginner-friendly tutorial gets you coding fast.",
       },
       {
         id: "8",
@@ -71,6 +82,8 @@ export class VideoManager {
         channel: "Cosden Solutions",
         embedUrl: "https://www.youtube.com/embed/8K1N3fE-cDs",
         favorite: false,
+        description:
+          "In this video we will learn about React Query, a data-fetching library from Tanstack.",
       },
     ];
   }

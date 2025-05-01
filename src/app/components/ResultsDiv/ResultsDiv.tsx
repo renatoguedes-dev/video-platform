@@ -10,7 +10,6 @@ const ResultsDiv = ({ searchResults }: IResultsDiv) => {
   const router = useRouter();
 
   const handleClick = (id: string) => {
-    console.log(`id é ${id}`);
     router.push(`/videos/${id}`);
   };
 
