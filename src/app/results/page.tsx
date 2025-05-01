@@ -2,9 +2,9 @@ import Header from "@/app/components/Header/Header";
 import ResultsContent from "../components/ResultsContent/ResultsContent";
 
 interface ParamsProps {
-  searchParams: {
+  searchParams: Promise<{
     search_query?: string;
-  };
+  }>;
 }
 
 const ResultsPage = async ({ searchParams }: ParamsProps) => {

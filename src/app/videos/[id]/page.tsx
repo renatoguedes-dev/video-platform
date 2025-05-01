@@ -2,9 +2,9 @@ import Header from "@/app/components/Header/Header";
 import VideoByIdContent from "@/app/components/VideoByIdContent/VideoByIdContent";
 
 interface ParamsProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 const VideoByIdPage = async ({ params }: ParamsProps) => {
