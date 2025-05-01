@@ -26,7 +26,7 @@ const FavoriteContent = () => {
         </Link>
       </div>
 
-      <h1>Músicas Favoritas</h1>
+      <h1>Vídeos Favoritos</h1>
 
       <div className="main">
         {data && data.length < 1 ? (
