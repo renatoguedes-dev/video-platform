@@ -20,6 +20,7 @@ const ResultsContent = ({ searchText }: IResultsContent) => {
 
   const { searchResults, setSearchResults } = useSearch();
   const [copyResults, setCopyResults] = useState<IVideo[] | null>(null);
+  const [searchedTerm, setSearchedTerm] = useState<string | undefined>("");
 
   const router = useRouter();
 
@@ -36,13 +37,14 @@ const ResultsContent = ({ searchText }: IResultsContent) => {
   }, [searchText, data, setSearchResults]);
 
   useEffect(() => {
-    if (!searchResults) {
+    if (!searchResults || searchedTerm === searchText) {
       return;
     }
 
+    setSearchedTerm(searchText);
     setCopyResults(searchResults);
     setSearchResults(null);
-  }, [searchResults, copyResults, setSearchResults]);
+  }, [searchResults, copyResults, setSearchResults, searchText, searchedTerm]);
 
   return (
     <div className="pageContent">
