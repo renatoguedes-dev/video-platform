@@ -24,7 +24,6 @@ const ResultsContent = ({ searchText }: IResultsContent) => {
   const router = useRouter();
 
   const handleClick = (id: string) => {
-    console.log("clicou");
     router.push(`/videos/${id}`);
   };
 

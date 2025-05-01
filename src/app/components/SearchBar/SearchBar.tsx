@@ -17,8 +17,6 @@ const SearchBar = ({ searchText, setSearchText }: ISearchBar) => {
 
   const handleSearchSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(`Pesquisando por: ${searchText}`);
-    // TODO fazer/chamar função de busca
 
     router.push(`/results?search_query=${searchText}`);
   };
