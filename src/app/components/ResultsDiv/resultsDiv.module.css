@@ -1,0 +1,33 @@
+.resultsDiv {
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.resultsWrapper {
+  width: 100%;
+}
+
+.individualResult {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.individualResult:hover {
+  background-color: rgb(243, 242, 242);
+}
+
+.miniImage {
+  width: 30px;
+}

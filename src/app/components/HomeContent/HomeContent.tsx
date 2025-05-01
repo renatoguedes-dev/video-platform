@@ -14,9 +14,11 @@ const HomeContent = () => {
 
   return (
     <div className={styles.pageContent}>
-      <Link href={"/favorites"} className={styles.favoritesLink}>
-        <p>Acessar músicas favoritas</p>
-      </Link>
+      <div className={styles.linkDiv}>
+        <Link href={"/favorites"} className={styles.favoritesLink}>
+          <p>Acessar músicas favoritas</p>
+        </Link>
+      </div>
 
       <div className={styles.main}>
         <div className={styles.videoDiv}>

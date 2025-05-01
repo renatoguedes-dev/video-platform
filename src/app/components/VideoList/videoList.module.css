@@ -1,7 +1,7 @@
 .listDiv {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   max-height: 490px;
   min-width: 270px;
 }

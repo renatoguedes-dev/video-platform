@@ -15,3 +15,13 @@ body {
 .content {
   padding: 10px 16px;
 }
+
+.paper-component {
+  width: 400px;
+}
+
+@media screen and (max-width: 420px) {
+  .paper-component {
+    width: 100%;
+  }
+}

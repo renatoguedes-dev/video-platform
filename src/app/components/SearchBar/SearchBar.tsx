@@ -1,16 +1,15 @@
-"use client"
+"use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent } from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
+import { ISearchBar } from "@/app/interfaces/SearchBar";
 
-const SearchBar = () => {
-  const [searchText, setSearchText] = useState<string>("");
-
+const SearchBar = ({ searchText, setSearchText }: ISearchBar) => {
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearchText(event.target.value); 
+    setSearchText(event.target.value);
   };
 
   const handleSearchSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -22,8 +21,9 @@ const SearchBar = () => {
   return (
     <Paper
       component="form"
-      sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400 }}
-      onSubmit={handleSearchSubmit} 
+      sx={{ p: "2px 4px", display: "flex", alignItems: "center", flex: 1 }}
+      className="paper-component"
+      onSubmit={handleSearchSubmit}
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
